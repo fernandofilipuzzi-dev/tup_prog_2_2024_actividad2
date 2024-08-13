@@ -71,7 +71,10 @@ namespace Ejercicio1
             string nombre = tbNombre.Text;
             Persona persona = new Persona(dni, nombre);
 
-            destacamento.ErradicarDenuncia(agente, persona, motivo, hIncidente, mIncidente);
+            int tipoIncidente = cbxIncidente.SelectedIndex;
+            
+            destacamento.RegistrarIncidente(agente, persona, motivo, hIncidente, mIncidente, tipoIncidente);
+                         
         }
 
     }

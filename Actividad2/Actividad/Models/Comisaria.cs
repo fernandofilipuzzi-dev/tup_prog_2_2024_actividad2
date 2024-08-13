@@ -11,23 +11,20 @@ namespace Ejercicio1.Models
 {
     public class Comisaria
     {
-        public int CantidadAgentes { get;private set; }
-
         Guardia[] guardias = new Guardia[2];
         ArrayList agentes = new ArrayList();
-        ArrayList denuncias = new ArrayList();
-        ArrayList arrestos = new ArrayList();
+        ArrayList incidentes = new ArrayList();
 
         public Comisaria()
         {
-            for(int n=0; n<guardias.Length;n++)
-               guardias[n]=new Guardia();
+            for (int n = 0; n < guardias.Length; n++)
+                guardias[n] = new Guardia();
         }
 
         public bool AsignarPolicia(Policia agente)
         {
             if (agentes.Count < 2)
-            { 
+            {
                 agentes.Add(agente);
                 return true;
             }
@@ -40,7 +37,7 @@ namespace Ejercicio1.Models
             for (int n = 0; n < agentes.Count; n++)
             {
                 Policia agente = agentes[n] as Policia;
-                if (agente !=null && agente.NumeroPlaca == nro)
+                if (agente != null && agente.NumeroPlaca == nro)
                 {
                     buscado = agente;
                 }
@@ -59,14 +56,20 @@ namespace Ejercicio1.Models
             }
         }
 
-        public void ErradicarDenuncia(Policia agente, Persona persona, string motivo, int hIncidente,int mIncidente)
+
+
+        public void RegistrarIncidente(Policia agente, Persona persona,
+                                    string motivo, int hIncidente, int mIncidente,
+                                    int tipoIncidente)
         {
-            Denuncia nueva = new Denuncia(agente,persona);
-            denuncias.Add(nueva);
+
+            Incidente nueva = new Incidente(agente, persona);
+            incidentes.Add(nueva);
 
             nueva.Hora = hIncidente;
             nueva.Minuto = mIncidente;
             nueva.Motivo = motivo;
+            nueva.TipoIncidente = tipoIncidente;
         }
     }
 }

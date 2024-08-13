@@ -35,7 +35,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxIncidente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -128,7 +128,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.cbxIncidente);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.tbNombre);
@@ -155,16 +155,16 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Tipo Incidente";
             // 
-            // comboBox2
+            // cbxIncidente
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbxIncidente.FormattingEnabled = true;
+            this.cbxIncidente.Items.AddRange(new object[] {
             "Denuncia",
             "Arresto"});
-            this.comboBox2.Location = new System.Drawing.Point(157, 27);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 17;
+            this.cbxIncidente.Location = new System.Drawing.Point(157, 27);
+            this.cbxIncidente.Name = "cbxIncidente";
+            this.cbxIncidente.Size = new System.Drawing.Size(121, 28);
+            this.cbxIncidente.TabIndex = 17;
             // 
             // label8
             // 
@@ -222,7 +222,7 @@
             this.btnRegistrarIncidente.Name = "btnRegistrarIncidente";
             this.btnRegistrarIncidente.Size = new System.Drawing.Size(106, 51);
             this.btnRegistrarIncidente.TabIndex = 4;
-            this.btnRegistrarIncidente.Text = "Registrar Denuncia";
+            this.btnRegistrarIncidente.Text = "Registrar Indicente";
             this.btnRegistrarIncidente.UseVisualStyleBackColor = true;
             this.btnRegistrarIncidente.Click += new System.EventHandler(this.btnRegistrarDenuncia_Click);
             // 
@@ -439,7 +439,7 @@
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbDNI;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxIncidente;
     }
 }
 

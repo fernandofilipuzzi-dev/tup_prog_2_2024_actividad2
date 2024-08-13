@@ -58,9 +58,8 @@
     <Compile Include="FormVerInicidentes.Designer.cs">
       <DependentUpon>FormVerInicidentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Arresto.cs" />
     <Compile Include="Models\Comisaria.cs" />
-    <Compile Include="Models\Denuncia.cs" />
+    <Compile Include="Models\Incidente.cs" />
     <Compile Include="Models\Guardia.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Policia.cs" />
@@ -90,10 +89,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="uml\ejercicio1.uml" />
+    <None Include="uml\actividad2.uml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="uml\actividad2_modelo_estatico_dominio.jpg" />
+    <Content Include="uml\actividad2_modelo_dinamico_crear_comisaria.jpg" />
+    <Content Include="uml\actividad2_modelo_dinamico_asignar_guardia.jpg" />
+    <Content Include="uml\actividad2_modelo_dinamico_registrar_incidente.jpg" />
+    <Content Include="uml\actividad2_modelo_estatico_incidente.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
