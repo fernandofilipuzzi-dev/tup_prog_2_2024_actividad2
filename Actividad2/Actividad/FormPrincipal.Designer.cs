@@ -30,9 +30,9 @@
         {
             this.btnAltaComisaria = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnListrarIncidentes = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbAdministracion = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxIncidente = new System.Windows.Forms.ComboBox();
@@ -56,9 +56,9 @@
             this.nupHDesde = new System.Windows.Forms.NumericUpDown();
             this.nupMDesde = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbNumeroPlaca = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbAdministracion.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupMIncidente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupHIncidente)).BeginInit();
@@ -86,25 +86,26 @@
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(133, 52);
-            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.TabIndex = 14;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // button4
+            // btnListrarIncidentes
             // 
-            this.button4.Location = new System.Drawing.Point(499, 25);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 52);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Listar incidentes";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnListrarIncidentes.Location = new System.Drawing.Point(499, 25);
+            this.btnListrarIncidentes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnListrarIncidentes.Name = "btnListrarIncidentes";
+            this.btnListrarIncidentes.Size = new System.Drawing.Size(132, 52);
+            this.btnListrarIncidentes.TabIndex = 1;
+            this.btnListrarIncidentes.Text = "Listar incidentes";
+            this.btnListrarIncidentes.UseVisualStyleBackColor = true;
+            this.btnListrarIncidentes.Click += new System.EventHandler(this.btnListrarIncidentes_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAltaComisaria);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btnListrarIncidentes);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(650, 85);
@@ -112,18 +113,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Administracion comisaría";
             // 
-            // groupBox2
+            // gbAdministracion
             // 
-            this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(650, 467);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Operaciones sobre el agente";
+            this.gbAdministracion.Controls.Add(this.groupBox5);
+            this.gbAdministracion.Controls.Add(this.groupBox3);
+            this.gbAdministracion.Controls.Add(this.label1);
+            this.gbAdministracion.Controls.Add(this.cmbNumeroPlaca);
+            this.gbAdministracion.Enabled = false;
+            this.gbAdministracion.Location = new System.Drawing.Point(12, 103);
+            this.gbAdministracion.Name = "gbAdministracion";
+            this.gbAdministracion.Size = new System.Drawing.Size(650, 467);
+            this.gbAdministracion.TabIndex = 8;
+            this.gbAdministracion.TabStop = false;
+            this.gbAdministracion.Text = "Operaciones sobre el agente";
             // 
             // groupBox5
             // 
@@ -142,7 +144,7 @@
             this.groupBox5.Location = new System.Drawing.Point(21, 212);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(612, 233);
-            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Administración de incidentes";
             // 
@@ -164,7 +166,7 @@
             this.cbxIncidente.Location = new System.Drawing.Point(157, 27);
             this.cbxIncidente.Name = "cbxIncidente";
             this.cbxIncidente.Size = new System.Drawing.Size(121, 28);
-            this.cbxIncidente.TabIndex = 17;
+            this.cbxIncidente.TabIndex = 5;
             // 
             // label8
             // 
@@ -186,17 +188,17 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(157, 113);
+            this.tbNombre.Location = new System.Drawing.Point(157, 110);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(158, 26);
-            this.tbNombre.TabIndex = 14;
+            this.tbNombre.TabIndex = 8;
             // 
             // tbDNI
             // 
             this.tbDNI.Location = new System.Drawing.Point(364, 110);
             this.tbDNI.Name = "tbDNI";
             this.tbDNI.Size = new System.Drawing.Size(96, 26);
-            this.tbDNI.TabIndex = 13;
+            this.tbDNI.TabIndex = 9;
             // 
             // label5
             // 
@@ -213,7 +215,7 @@
             this.tbMotivo.Multiline = true;
             this.tbMotivo.Name = "tbMotivo";
             this.tbMotivo.Size = new System.Drawing.Size(303, 66);
-            this.tbMotivo.TabIndex = 11;
+            this.tbMotivo.TabIndex = 10;
             // 
             // btnRegistrarIncidente
             // 
@@ -221,7 +223,7 @@
             this.btnRegistrarIncidente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegistrarIncidente.Name = "btnRegistrarIncidente";
             this.btnRegistrarIncidente.Size = new System.Drawing.Size(106, 51);
-            this.btnRegistrarIncidente.TabIndex = 4;
+            this.btnRegistrarIncidente.TabIndex = 11;
             this.btnRegistrarIncidente.Text = "Registrar Indicente";
             this.btnRegistrarIncidente.UseVisualStyleBackColor = true;
             this.btnRegistrarIncidente.Click += new System.EventHandler(this.btnRegistrarDenuncia_Click);
@@ -245,19 +247,19 @@
             0});
             this.nupMIncidente.Name = "nupMIncidente";
             this.nupMIncidente.Size = new System.Drawing.Size(59, 26);
-            this.nupMIncidente.TabIndex = 8;
+            this.nupMIncidente.TabIndex = 7;
             // 
             // nupHIncidente
             // 
             this.nupHIncidente.Location = new System.Drawing.Point(157, 72);
             this.nupHIncidente.Maximum = new decimal(new int[] {
-            24,
+            23,
             0,
             0,
             0});
             this.nupHIncidente.Name = "nupHIncidente";
             this.nupHIncidente.Size = new System.Drawing.Size(62, 26);
-            this.nupHIncidente.TabIndex = 7;
+            this.nupHIncidente.TabIndex = 6;
             // 
             // groupBox3
             // 
@@ -272,7 +274,7 @@
             this.groupBox3.Location = new System.Drawing.Point(21, 74);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(612, 132);
-            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Administración de guardias";
             // 
@@ -284,9 +286,14 @@
             0,
             0,
             0});
+            this.nupNumeroGuardia.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.nupNumeroGuardia.Name = "nupNumeroGuardia";
             this.nupNumeroGuardia.Size = new System.Drawing.Size(133, 26);
-            this.nupNumeroGuardia.TabIndex = 4;
+            this.nupNumeroGuardia.TabIndex = 1;
             // 
             // label4
             // 
@@ -312,7 +319,7 @@
             this.btnAginacionGuardias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAginacionGuardias.Name = "btnAginacionGuardias";
             this.btnAginacionGuardias.Size = new System.Drawing.Size(132, 52);
-            this.btnAginacionGuardias.TabIndex = 2;
+            this.btnAginacionGuardias.TabIndex = 5;
             this.btnAginacionGuardias.Text = "Asignación de las guardias";
             this.btnAginacionGuardias.UseVisualStyleBackColor = true;
             this.btnAginacionGuardias.Click += new System.EventHandler(this.btnAsignarGuardias_Click);
@@ -327,7 +334,7 @@
             0});
             this.nupMDuracion.Name = "nupMDuracion";
             this.nupMDuracion.Size = new System.Drawing.Size(133, 26);
-            this.nupMDuracion.TabIndex = 7;
+            this.nupMDuracion.TabIndex = 4;
             // 
             // label3
             // 
@@ -348,7 +355,7 @@
             0});
             this.nupHDesde.Name = "nupHDesde";
             this.nupHDesde.Size = new System.Drawing.Size(62, 26);
-            this.nupHDesde.TabIndex = 7;
+            this.nupHDesde.TabIndex = 2;
             // 
             // nupMDesde
             // 
@@ -360,7 +367,7 @@
             0});
             this.nupMDesde.Name = "nupMDesde";
             this.nupMDesde.Size = new System.Drawing.Size(59, 26);
-            this.nupMDesde.TabIndex = 8;
+            this.nupMDesde.TabIndex = 3;
             // 
             // label1
             // 
@@ -371,20 +378,20 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Placa de Agente";
             // 
-            // comboBox1
+            // cmbNumeroPlaca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 28);
-            this.comboBox1.TabIndex = 3;
+            this.cmbNumeroPlaca.FormattingEnabled = true;
+            this.cmbNumeroPlaca.Location = new System.Drawing.Point(149, 27);
+            this.cmbNumeroPlaca.Name = "cmbNumeroPlaca";
+            this.cmbNumeroPlaca.Size = new System.Drawing.Size(133, 28);
+            this.cmbNumeroPlaca.TabIndex = 2;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 634);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbAdministracion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCerrar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -393,8 +400,8 @@
             this.Name = "FormPrincipal";
             this.Text = "Actividad 2 - \"Ana es policia!\"";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbAdministracion.ResumeLayout(false);
+            this.gbAdministracion.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupMIncidente)).EndInit();
@@ -413,11 +420,11 @@
 
         private System.Windows.Forms.Button btnAltaComisaria;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnListrarIncidentes;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbAdministracion;
         private System.Windows.Forms.Button btnAginacionGuardias;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbNumeroPlaca;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown nupNumeroGuardia;

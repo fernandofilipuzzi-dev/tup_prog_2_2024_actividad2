@@ -18,5 +18,10 @@ namespace Ejercicio1.Models
             this.Nombre = nombre;
             this.NumeroPlaca = numeroPlaca;
         }
+
+        public string VerDatos() 
+        {
+            return $"{this.Nombre}(DNI:{this.DNI} - placa:{NumeroPlaca})";
+        }
     }
 }

@@ -15,6 +15,14 @@ namespace Ejercicio1.Models
         ArrayList agentes = new ArrayList();
         ArrayList incidentes = new ArrayList();
 
+        public int CantidadIncidentes
+        {
+            get 
+            {
+                return incidentes.Count;    
+            }
+        }
+
         public Comisaria()
         {
             for (int n = 0; n < guardias.Length; n++)
@@ -70,6 +78,15 @@ namespace Ejercicio1.Models
             nueva.Minuto = mIncidente;
             nueva.Motivo = motivo;
             nueva.TipoIncidente = tipoIncidente;
+        }
+
+        public Incidente VerIncidente(int idx)
+        {
+            if (idx>=0 && idx < CantidadIncidentes)
+            {
+                return incidentes[idx] as Incidente;
+            }
+            return null;
         }
     }
 }

@@ -23,5 +23,32 @@ namespace Ejercicio1.Models
             OficialACargo = oficial;
             Sujeto = sujeto;
         }
+
+        public string VerDescripcion()
+        {
+            string descripcion = "";
+
+            if (TipoIncidente == 0)
+            {
+                descripcion =
+$@"Denuncia Policial, Emitida a las {Hora}:{Minuto} 
+Motivo: {Motivo}
+Agente policial inteviniente: {OficialACargo.VerDatos()}
+Sujeto Denunciante:{OficialACargo.VerDatos()}
+";
+            }
+            else if (TipoIncidente == 1)
+            {
+                descripcion =
+$@"Orden de Arresto, Emitada a las {Hora}:{Minuto} 
+Motivo: {Motivo}
+Sujeto a arrestar:{OficialACargo.VerDatos()}
+Orden: Por la presente se ordena al arresto inmediato de {OficialACargo.VerDatos()}. El Agente {OficialACargo.VerDatos()} está autorizado a proceder con el arresto conforme a las leyes y regulaciones aplicadas
+";
+            }
+            return descripcion;
+
+  
+        }
     }
 }

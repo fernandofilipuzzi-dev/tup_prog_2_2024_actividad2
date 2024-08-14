@@ -16,5 +16,10 @@ namespace Ejercicio1.Models
             this.DNI = dni;
             this.Nombre = nombre;
         }
+
+        public string VerDatos()
+        {
+            return $"{this.Nombre}(DNI:{this.DNI})";
+        }
     }
 }
