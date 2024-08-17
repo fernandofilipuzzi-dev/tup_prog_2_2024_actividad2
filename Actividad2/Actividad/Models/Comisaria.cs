@@ -1,13 +1,7 @@
-﻿using System;
+﻿
 using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ejercicio1.Models
+namespace Actividad2.Models
 {
     public class Comisaria
     {
@@ -63,8 +57,6 @@ namespace Ejercicio1.Models
                 sel.TiempoMinutos = mDuracion;
             }
         }
-
-
 
         public void RegistrarIncidente(Policia agente, Persona persona,
                                     string motivo, int hIncidente, int mIncidente,

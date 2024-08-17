@@ -1,15 +1,8 @@
-﻿using Ejercicio1.Models;
+﻿using Actividad2.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejercicio1
+namespace Actividad2
 {
     public partial class FormPrincipal : Form
     {
@@ -45,8 +38,8 @@ namespace Ejercicio1
 
             int nroPlaca=Convert.ToInt32(nroPlacaString);
             int nroGuardia = Convert.ToInt32(nupNumeroGuardia.Value);
-            int hDesde= Convert.ToInt32(nupHDesde.Value);
-            int mDesde=Convert.ToInt32(nupMDesde.Value);
+            int hDesde= Convert.ToInt32(nupHGuardiaDesde.Value);
+            int mDesde=Convert.ToInt32(nupMGuardiaDesde.Value);
             int duracion=Convert.ToInt32(nupMDuracion.Value);
 
             Policia agente = destacamento.VerAgente(nroPlaca);
@@ -56,9 +49,8 @@ namespace Ejercicio1
             #region clear
             cmbNumeroPlaca.SelectedIndex = -1;
             nupNumeroGuardia.Value = -1;
-            nupHIncidente.Value = 0;
-            nupMIncidente.Value = 0;
-            tbMotivo.Clear();
+            nupHGuardiaDesde.Value = 0;
+            nupMGuardiaDesde.Value = 0;
             #endregion
         }
 

@@ -1,4 +1,4 @@
-﻿namespace Ejercicio1
+﻿namespace Actividad2
 {
     partial class FormVerInicidentes
     {
