@@ -27,7 +27,8 @@ namespace Ejercicio1.Models
         public string VerDescripcion()
         {
             string descripcion = "";
-
+            byte[] vector;
+            vector.len
             if (TipoIncidente == 0)
             {
                 descripcion =
